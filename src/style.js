@@ -25,6 +25,7 @@ export const textDayFontSize = 16;
 export const textMonthFontSize = 16;
 export const textDayHeaderFontSize = 13;
 export const todayButtonFontSize = 14;
+export const textDayBackgroundColor = 'rgba(255, 255, 255, 0)'
 
 export const textDayStyle = undefined;
 export const dotStyle = undefined;
