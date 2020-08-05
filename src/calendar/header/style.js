@@ -14,15 +14,19 @@ export default function(theme={}) {
       marginTop: 6,
       alignItems: 'center'
     },
+    headerContainer: {
+      flex: 1,
+      flexDirection: 'row'
+    },
     monthText: {
       fontSize: appStyle.textMonthFontSize,
       fontFamily: appStyle.textMonthFontFamily,
-      fontWeight: appStyle.textMonthFontWeight,
-      color: appStyle.monthTextColor,
+      fontWeight: '500',
+      color: '#fff',
       margin: 10
     },
     arrow: {
-      padding: 10,
+      padding: 15,
       ...appStyle.arrowStyle
     },
     arrowImage: {
@@ -45,6 +49,9 @@ export default function(theme={}) {
       fontFamily: appStyle.textDayHeaderFontFamily,
       fontWeight: appStyle.textDayHeaderFontWeight,
       color: appStyle.textSectionTitleColor
+    },
+    disabledDayHeader: {
+      color: appStyle.textSectionTitleDisabledColor
     },
     ...(theme[STYLESHEET_ID] || {})
   });

@@ -1,23 +1,25 @@
-import { StyleSheet, Platform } from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import * as defaultStyle from '../../../style';
 
 const STYLESHEET_ID = 'stylesheet.day.basic';
 
-export default function styleConstructor(theme = {}) {
-  const appStyle = { ...defaultStyle, ...theme };
+export default function styleConstructor(theme={}) {
+  const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 32,
-      height: 32,
-      alignItems: 'center'
+      width: 42,
+      height: 47,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 8
     },
     text: {
       marginTop: Platform.OS === 'android' ? 4 : 6,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
-      fontWeight: appStyle.textDayFontWeight,
-      color: appStyle.dayTextColor,
-      backgroundColor: appStyle.textDayBackgroundColor,
+      fontWeight: '500',
+      color: '#fff',
+      backgroundColor: 'transparent',
       ...appStyle.textDayStyle
     },
     alignedText: {
@@ -25,13 +27,11 @@ export default function styleConstructor(theme = {}) {
     },
     selected: {
       backgroundColor: appStyle.selectedDayBackgroundColor,
-      borderRadius: 4,
-      width: 32,
-      height: 32,
+      borderRadius: 16
     },
     today: {
       backgroundColor: appStyle.todayBackgroundColor,
-      borderRadius: 4,
+      borderRadius: 16
     },
     todayText: {
       color: appStyle.todayTextColor
